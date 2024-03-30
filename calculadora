@@ -1,60 +1,29 @@
-#include <iostream>
-using namespace std;
-
 // Função para adicionar dois números
-double adicionar(double a, double b) {
+function adicionar(a, b) {
     return a + b;
 }
 
 // Função para subtrair dois números
-double subtrair(double a, double b) {
+function subtrair(a, b) {
     return a - b;
 }
 
 // Função para multiplicar dois números
-double multiplicar(double a, double b) {
+function multiplicar(a, b) {
     return a * b;
 }
 
 // Função para dividir dois números
-double dividir(double a, double b) {
-    if (b != 0) {
+function dividir(a, b) {
+    if (b !== 0) {
         return a / b;
     } else {
-        cout << "Não é possível dividir por zero!" << endl;
-        return 0;
+        return "Não é possível dividir por zero!";
     }
 }
 
-int main() {
-    double num1, num2;
-    char operacao;
-
-    cout << "Digite o primeiro número: ";
-    cin >> num1;
-
-    cout << "Digite a operação (+, -, *, /): ";
-    cin >> operacao;
-
-    cout << "Digite o segundo número: ";
-    cin >> num2;
-
-    switch (operacao) {
-        case '+':
-            cout << "Resultado: " << adicionar(num1, num2) << endl;
-            break;
-        case '-':
-            cout << "Resultado: " << subtrair(num1, num2) << endl;
-            break;
-        case '*':
-            cout << "Resultado: " << multiplicar(num1, num2) << endl;
-            break;
-        case '/':
-            cout << "Resultado: " << dividir(num1, num2) << endl;
-            break;
-        default:
-            cout << "Operação inválida!" << endl;
-    }
-
-    return 0;
-}
+// Exemplo de uso das funções
+console.log("Adição: " + adicionar(5, 3));
+console.log("Subtração: " + subtrair(5, 3));
+console.log("Multiplicação: " + multiplicar(5, 3));
+console.log("Divisão: " + dividir(5, 3));
