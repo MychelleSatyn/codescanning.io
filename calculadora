@@ -1,29 +1,60 @@
+#include <iostream>
+using namespace std;
+
 // Função para adicionar dois números
-function adicionar(a, b) {
+double adicionar(double a, double b) {
     return a + b;
 }
 
 // Função para subtrair dois números
-function subtrair(a, b) {
+double subtrair(double a, double b) {
     return a - b;
 }
 
 // Função para multiplicar dois números
-function multiplicar(a, b) {
+double multiplicar(double a, double b) {
     return a * b;
 }
 
 // Função para dividir dois números
-function dividir(a, b) {
-    if (b !== 0) {
+double dividir(double a, double b) {
+    if (b != 0) {
         return a / b;
     } else {
-        return "Não é possível dividir por zero!";
+        cout << "Não é possível dividir por zero!" << endl;
+        return 0;
     }
 }
 
-// Exemplo de uso das funções
-console.log("Adição: " + adicionar(5, 3));
-console.log("Subtração: " + subtrair(5, 3));
-console.log("Multiplicação: " + multiplicar(5, 3));
-console.log("Divisão: " + dividir(5, 3));
+int main() {
+    double num1, num2;
+    char operacao;
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+
+    cout << "Digite a operação (+, -, *, /): ";
+    cin >> operacao;
+
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+    switch (operacao) {
+        case '+':
+            cout << "Resultado: " << adicionar(num1, num2) << endl;
+            break;
+        case '-':
+            cout << "Resultado: " << subtrair(num1, num2) << endl;
+            break;
+        case '*':
+            cout << "Resultado: " << multiplicar(num1, num2) << endl;
+            break;
+        case '/':
+            cout << "Resultado: " << dividir(num1, num2) << endl;
+            break;
+        default:
+            cout << "Operação inválida!" << endl;
+    }
+
+    return 0;
+}
