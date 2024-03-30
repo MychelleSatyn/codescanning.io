@@ -15,7 +15,8 @@ function multiplicar(a, b) {
 
 // Função para dividir dois números
 function dividir(a, b) {
-    if (b !== 0) {
+    // Erro 1: Condição mal formada
+    if (b != 0) { // Alterado !== para !=
         return a / b;
     } else {
         return "Não é possível dividir por zero!";
@@ -23,7 +24,9 @@ function dividir(a, b) {
 }
 
 // Exemplo de uso das funções
+// Erro 2: Nome da função incorreto
 console.log("Adição: " + adicionar(5, 3));
 console.log("Subtração: " + subtrair(5, 3));
 console.log("Multiplicação: " + multiplicar(5, 3));
-console.log("Divisão: " + dividir(5, 3));
+// Erro 3: Parâmetros incorretos
+console.log("Divisão: " + dividir(5)); // Removido o segundo parâmetro
